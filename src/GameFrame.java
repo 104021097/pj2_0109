@@ -6,7 +6,10 @@ public class GameFrame extends JFrame {
 
     private JButton jbtn_exit = new JButton("Exit");
     private JPanel jpn1 = new JPanel(new BorderLayout(5,5));
-    private JPanel jpn2 = new JPanel(new GridLayout(5,1,5,5));//顏色區域
+    private JPanel jpn_buttom = new JPanel(new GridLayout(5,1,5,5));//繪圖工具區域
+    private JPanel jpn_left = new JPanel(new GridLayout(5,1,5,5));//題目區域
+    private JPanel jpn_right = new JPanel(new GridLayout(1,1,5,5));//聊天室
+    private JPanel jpn_top = new JPanel(new GridLayout(1,1,5,5));//時間條
     private JTextArea draw = new JTextArea();//畫圖區域
     private Container cp;
 
@@ -17,10 +20,12 @@ public class GameFrame extends JFrame {
     }
     private void initComp(){
         this.setBounds(100,100,600,600);
-        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setTitle("你畫我猜");
         cp = this.getContentPane();
         cp.setLayout(new BorderLayout(5,5));
+
+
 
 //        離開按鈕
         jbtn_exit.addActionListener(new ActionListener() {
@@ -83,4 +88,4 @@ public class GameFrame extends JFrame {
 
 
     }
-}
+
